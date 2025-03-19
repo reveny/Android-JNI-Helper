@@ -84,22 +84,6 @@ try {
 }
 ```
 
-### Working with Arrays
-
-```cpp
-// Convert a Java array to a C++ vector
-jintArray javaArray = /* ... */;
-jsize length = env->GetArrayLength(javaArray);
-jint* elements = env->GetIntArrayElements(javaArray, nullptr);
-std::vector<int> cppVector(elements, elements + length);
-env->ReleaseIntArrayElements(javaArray, elements, JNI_ABORT);
-
-// Create a Java array from C++ data
-std::vector<int> data = {1, 2, 3, 4, 5};
-jintArray javaArrayFromCPP = env->NewIntArray(data.size());
-env->SetIntArrayRegion(javaArrayFromCPP, 0, data.size(), data.data());
-```
-
 ## API Reference
 
 ### Exception Handling
