@@ -156,6 +156,6 @@ If you'd like to, you can support me on my [Website](https://reveny.me/donate.ht
 
 ## License
 
-GPL-3.0 License
+MIT License
 
 ---
